@@ -61,13 +61,13 @@ const api = (server, db) => {
       promotionController.get(db, req, res);
     })
     .post(authenticateJWT.authenticateJWT, (req, res) => {
-      promotionController.get(db, req, res);
+      promotionController.post(db, req, res);
     })
     .put(authenticateJWT.authenticateJWT, (req, res) => {
-      promotionController.get(db, req, res);
+      promotionController.put(db, req, res);
     })
     .delete(authenticateJWT.authenticateJWT, (req, res) => {
-      promotionController.get(db, req, res);
+      promotionController.drop(db, req, res);
     });
 
   //competence
